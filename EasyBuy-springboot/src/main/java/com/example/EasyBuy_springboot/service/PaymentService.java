@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.EasyBuy_springboot.PaymentStatus;
-import com.example.EasyBuy_springboot.model.Order;
+import com.example.EasyBuy_springboot.model.Cart;
 import com.example.EasyBuy_springboot.model.Payment;
 import com.example.EasyBuy_springboot.repository.PaymentRepository;
 
@@ -18,7 +18,7 @@ public class PaymentService {
     private PaymentRepository paymentRepository;
 
     @Transactional
-    public Payment processPayment(Order order, BigDecimal amount, String paymentMethod) {
+    public Payment processPayment(Cart order, BigDecimal amount, String paymentMethod) {
         Payment payment = new Payment();
         payment.setOrder(order);
         payment.setAmount(amount);

@@ -1,3 +1,9 @@
+-- This file is for demodb opertions
+
+
+--fields are changed now..test accordingly
+
+
 -- Create database if not exists
 CREATE DATABASE IF NOT EXISTS `EasyBuy_SP`;
 

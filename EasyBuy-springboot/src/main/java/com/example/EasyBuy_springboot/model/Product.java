@@ -1,5 +1,6 @@
 package com.example.EasyBuy_springboot.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,59 +13,22 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long productId;
 
-    private String name;
+    private String productName;
     private double price;
-
+    
+    @Column(nullable = false)
+    private Integer quantity;
+    
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private Category category;
+    private Category category; 
     
+    // TODO: getter, setter & constructor
     
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
-	}
-
-	public Product(Long id, String name, double price, Category category) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.price = price;
-		this.category = category;
-	}
-
-	public Product() {
-		super();
-	}
+  //TODO: add or delete related controller, service, serviceImpl & repository accordingly
+    
 
     
 }

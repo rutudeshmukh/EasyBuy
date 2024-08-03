@@ -13,10 +13,5 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/get")
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
-    }
-
-    // TODO: other REST endpoints as needed
+    // TODO: REST endpoints as needed
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.EasyBuy_springboot.model.Order;
+import com.example.EasyBuy_springboot.model.Cart;
 import com.example.EasyBuy_springboot.model.User;
 import com.example.EasyBuy_springboot.service.OrderService;
 import com.example.EasyBuy_springboot.service.UserService;
@@ -24,16 +24,16 @@ public class OrderController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/create")
-    public ResponseEntity<Order> createOrder(@RequestParam Long userId) {
+//    @PostMapping("/create")
+//    public ResponseEntity<Cart> createOrder(@RequestParam Long userId) {
 //        User user = userService.findById(userId)
 //            .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 //
 //        List<Cart> cartItems = cartService.getCartItemsByUser(user);
 //        Order order = orderService.createOrder(user, cartItems);
-        return new ResponseEntity<>(order, HttpStatus.CREATED);
-    }
+//        return new ResponseEntity<>(order, HttpStatus.CREATED);
+//    }
 
-    // Other endpoints
+    // TODO: Rest endpoints
 }
 

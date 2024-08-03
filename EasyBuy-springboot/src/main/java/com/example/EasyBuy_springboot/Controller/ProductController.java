@@ -13,10 +13,6 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/get")
-    public List<Product> getAllProducts() {
-        return productService.getAllProducts();
-    }
 
     // TODO: other REST endpoints as needed
 }
