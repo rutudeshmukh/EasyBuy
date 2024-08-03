@@ -16,6 +16,11 @@ public class UserService {
         return userRepository.findAll();
     }
 
+	public Object findById(Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
     // TODO: other methods as needed
 }
 
