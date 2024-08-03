@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.EasyBuy_springboot.PaymentStatus;
 import com.example.EasyBuy_springboot.model.Order;
 import com.example.EasyBuy_springboot.model.Payment;
 import com.example.EasyBuy_springboot.repository.PaymentRepository;

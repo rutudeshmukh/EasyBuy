@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.EasyBuy_springboot.model.Cart;
 import com.example.EasyBuy_springboot.model.Order;
 import com.example.EasyBuy_springboot.model.User;
 import com.example.EasyBuy_springboot.service.OrderService;
