@@ -17,7 +17,7 @@ public class Category {
 
     private String categoryName;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "productCategory")
     private List<Product> products;
     
     // TODO: getter, setter & constructor

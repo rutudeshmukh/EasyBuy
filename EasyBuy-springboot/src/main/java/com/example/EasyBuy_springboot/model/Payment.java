@@ -76,7 +76,6 @@ public class Payment {
     @Column(nullable = false)
     private LocalDateTime paymentDate;
 
-    // Constructors
     public Payment() {}
 
     public Payment(PaymentStatus status, BigDecimal amount, LocalDateTime paymentDate) {
