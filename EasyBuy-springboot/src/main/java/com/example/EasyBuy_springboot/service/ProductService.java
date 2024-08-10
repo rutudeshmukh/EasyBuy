@@ -1,10 +1,16 @@
 package com.example.EasyBuy_springboot.service;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
-public class ProductService {
+import com.example.EasyBuy_springboot.model.Product;
 
-    // TODO: other methods as needed
+public interface ProductService {
+
+	Product saveProduct(Product product);
+
+	List<Product> fetchProductList();
+
+	Product updateProduct(Product product, Long productId);
+
+	void deleteProduct(Long productId);
 }
-

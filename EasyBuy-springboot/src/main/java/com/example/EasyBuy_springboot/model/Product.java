@@ -16,20 +16,77 @@ public class Product {
     private Long productId;
 
     private String productName;
-    private double price;
+    private double productPrice;
     
     @Column(nullable = false)
-    private Integer quantity;
+    private Integer productQuantity;
     
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private Category category; 
+    private Category productCategory;
+
+	public Product() {
+		super();
+	}
+
+	public Long getProductId() {
+		return productId;
+	}
+
+	public void setProductId(Long productId) {
+		this.productId = productId;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public double getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(double productPrice) {
+		this.productPrice = productPrice;
+	}
+
+	public Integer getProductQuantity() {
+		return productQuantity;
+	}
+
+	public void setProductQuantity(Integer productQuantity) {
+		this.productQuantity = productQuantity;
+	}
+
+	public Category getProductCategory() {
+		return productCategory;
+	}
+
+	public void setProductCategory(Category productCategory) {
+		this.productCategory = productCategory;
+	}
+
+	public Product(Long productId, String productName, double productPrice, Integer productQuantity,
+			Category productCategory) {
+		super();
+		this.productId = productId;
+		this.productName = productName;
+		this.productPrice = productPrice;
+		this.productQuantity = productQuantity;
+		this.productCategory = productCategory;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", productName=" + productName + ", productPrice=" + productPrice
+				+ ", productQuantity=" + productQuantity + ", productCategory=" + productCategory + "]";
+	}
     
     // TODO: getter, setter & constructor
     
   //TODO: add or delete related controller, service, serviceImpl & repository accordingly
-    
-
-    
 }
 
